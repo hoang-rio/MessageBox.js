@@ -4,7 +4,7 @@ Hộp thoại thông báo cho web</h1>
 <h2>Hướng dẫn sử dụng:</h1>
 <ol>
 <li>Chèn MessageBox.js vào website của bạn!</li>
-<li>Gọi MessageBox.Show('Nội dung muốn hiển thị',[MessageBoxButton],[MessageBox.type],[callback])
+<li>Gọi MessageBox.Show('Message',[MessageBoxButton],[MessageBox.type],[callback])
 	<ul>Trong đó
 		<li>MessageBoxButton là loại button muốn hiển thị trên MessageBox. Có hai loại đó là MessageBoxButton.Ok và MessageBoxButton.YesNo</li>
 		<li>MessageBox.type là kiểu MessageBox có 2 loại đó là MessageBox.error và MessageBox.success</li>
