@@ -11,12 +11,20 @@ MessageBox={
             OK: 'Đồng ý',
             Yes: 'Xác nhận',
             No: 'Hủy',
+            ErrorBox: 'Lỗi',
+            SuccessBox: 'Thành công',
+            WarringBox: 'Cảnh báo',
+            InfoBox: 'Thông tin',
             ErorMsg: 'MessageBox yêu cầu jQuery để hoạt động'
         },
         en:{
             OK: 'OK',
             Yes: 'Yes',
             No: 'No',
+            ErrorBox: 'Error',
+            SuccessBox: 'Success',
+            WarringBox: 'Warring',
+            InfoBox: 'Infomation',
             ErorMsg: 'MessageBox require jQuery to run'
         }
 
@@ -30,18 +38,18 @@ MessageBox={
         if(this.language[this.config['lang']]!=null) var string=this.language[this.config['lang']];
         var html='<div id="messagebox_mask" style="position: fixed; z-index: 99999; top: 0px; left: 0px; background: rgba(0, 0, 0, 0.53) none repeat scroll 0% 0%; width: 100%; height: 100%;">';
         if(type==this.error){
-            html+='<div id="messagebox" style="height: 100px; background:rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(255, 1, 16);">';
+            html+='<div id="messagebox" title="'+string.ErrorBox+'" style="height: 100px; background:rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(255, 1, 16);">';
         }
         else{
             if(type==this.warring){
-                html+='<div id="messagebox" style="height: 100px; background: rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(255, 190, 14);">';
+                html+='<div id="messagebox" title="'+string.WarringBox+'" style="height: 100px; background: rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(255, 190, 14);">';
             }
             else{
                 if(type==this.info){
-                    html+='<div id="messagebox" style="height: 100px; background: rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(3, 242, 255);">';
+                    html+='<div id="messagebox" title="'+string.InfoBox+'" style="height: 100px; background: rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(3, 242, 255);">';
                 }
                 else{
-                    html+='<div id="messagebox" style="height: 100px; background: rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(0, 128, 0);">';
+                    html+='<div id="messagebox" title="'+string.SuccessBox+'" style="height: 100px; background: rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(0, 128, 0);">';
                 }
             }
         }
