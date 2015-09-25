@@ -28,7 +28,7 @@ MessageBox={
     Show: function(message,button,type,callback){
         var string=this.language.vi;
         if(this.language[this.config['lang']]!=null) var string=this.language[this.config['lang']];
-        var html='<div id="messagebox_mask" style="position: fixed; z-index: 9999; top: 0px; left: 0px; background: rgba(0, 0, 0, 0.53) none repeat scroll 0% 0%; width: 100%; height: 100%;">';
+        var html='<div id="messagebox_mask" style="position: fixed; z-index: 99999; top: 0px; left: 0px; background: rgba(0, 0, 0, 0.53) none repeat scroll 0% 0%; width: 100%; height: 100%;">';
         if(type==this.error){
             html+='<div id="messagebox" style="height: 100px; background:rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(255, 1, 16);">';
         }
@@ -58,7 +58,7 @@ MessageBox={
         basediv.id="messagebox_base";
         basediv.innerHTML=html;
         document.body.insertBefore(basediv,document.body.firstChild);
-        document.body.style.overflow="hiden";
+        document.body.style.overflow="hidden";
         if(callback==null) callback={};
         var close=function(){
             document.body.removeChild(document.querySelector('#messagebox_base'));
