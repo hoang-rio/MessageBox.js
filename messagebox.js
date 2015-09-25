@@ -23,6 +23,8 @@ MessageBox={
     },
     error:'ErrorBox',
     success: 'SuccessBox',
+    warring: 'WarringBox',
+    info: 'InfoBox',
     Show: function(message,button,type,callback){
         var string=this.language.vi;
         if(this.language[this.config['lang']]!=null) var string=this.language[this.config['lang']];
@@ -31,7 +33,17 @@ MessageBox={
             html+='<div id="messagebox" style="height: 100px; background:rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(255, 1, 16);">';
         }
         else{
-            html+='<div id="messagebox" style="height: 100px; background: rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(0, 128, 0);">';
+            if(type==this.warring){
+                html+='<div id="messagebox" style="height: 100px; background: rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(255, 190, 14);">';
+            }
+            else{
+                if(type==this.info){
+                    html+='<div id="messagebox" style="height: 100px; background: rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(3, 242, 255);">';
+                }
+                else{
+                    html+='<div id="messagebox" style="height: 100px; background: rgba(255, 255, 255, 0.88) none repeat scroll 0% 0%; position: relative; top: 40%; left: 35%; width: 400px; font-style: italic; font-weight: 600; padding: 5px; border: 1px solid rgb(0, 128, 0);">';
+                }
+            }
         }
         html+='<div id="message" style="max-height: position: relative; font-size: 13px; font-style: normal; font-weight: 400;">'+message+'</span>';
         if(button==MessageBoxButton.Ok){
