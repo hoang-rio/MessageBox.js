@@ -15,7 +15,6 @@ MessageBox={
             SuccessBox: 'Thành công',
             WarringBox: 'Cảnh báo',
             InfoBox: 'Thông tin',
-            ErorMsg: 'MessageBox yêu cầu jQuery để hoạt động'
         },
         en:{
             OK: 'OK',
@@ -25,7 +24,6 @@ MessageBox={
             SuccessBox: 'Success',
             WarringBox: 'Warring',
             InfoBox: 'Infomation',
-            ErorMsg: 'MessageBox require jQuery to run'
         }
 
     },
