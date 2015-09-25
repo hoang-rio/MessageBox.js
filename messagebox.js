@@ -54,18 +54,18 @@ MessageBox={
         };
         if(button==MessageBoxButton.Ok){
             document.querySelector('#messagebox-btn-ok').onclick=function(){
-                if(callback.Ok!=null) callback.Ok();
                 close();
+                if(callback.Ok!=null) callback.Ok();
             };
         }
         if(button==MessageBoxButton.YesNo) {
             document.querySelector('#messagebox-btn-yes').onclick = function () {
-                if (callback.Yes != null) callback.Yes();
                 close();
+                if (callback.Yes != null) callback.Yes();
             };
             document.querySelector('#messagebox-btn-no').onclick = function () {
-                if (callback.No != null) callback.No();
                 close();
+                if (callback.No != null) callback.No();
             };
         }
     }
