@@ -51,7 +51,7 @@ MessageBox={
                 }
             }
         }
-        html+='<div id="message" style="max-height: position: relative; font-size: 13px; font-style: normal; font-weight: 400;">'+message+'</span>';
+        html+='<div id="message" style="color: black !important; max-height: position: relative; font-size: 13px; font-style: normal; font-weight: 400;">'+message+'</span>';
         if(button==MessageBoxButton.Ok){
             html+='<div style="position: absolute; color: white; background-color: green; width: 70px; padding: 4px; left: 165px; text-align: center; cursor: pointer; top: 65px; border: 2px solid white;" id="messagebox-btn-ok" title="'+string.OK+'">'+string.OK+'</div>';
         }
