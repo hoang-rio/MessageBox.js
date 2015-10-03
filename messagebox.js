@@ -53,11 +53,11 @@ MessageBox={
         }
         html+='<div id="message" style="max-height: position: relative; font-size: 13px; font-style: normal; font-weight: 400;">'+message+'</span>';
         if(button==MessageBoxButton.Ok){
-            html+='<div style="position: absolute; color: white; background-color: green; width: 65px; padding: 4px; left: 165px; text-align: center; cursor: pointer; top: 65px; border: 2px solid white;" id="messagebox-btn-ok" title="'+string.OK+'">'+string.OK+'</div>';
+            html+='<div style="position: absolute; color: white; background-color: green; width: 70px; padding: 4px; left: 165px; text-align: center; cursor: pointer; top: 65px; border: 2px solid white;" id="messagebox-btn-ok" title="'+string.OK+'">'+string.OK+'</div>';
         }
         if(button==MessageBoxButton.YesNo){
-            html+='<span style="position: absolute; color: white; background-color: green; width: 65px; padding: 4px; left: 130px; text-align: center; border: 2px solid white; cursor: pointer; top: 65px; font-style: normal;" id="messagebox-btn-yes" title="'+string.Yes+'">'+string.Yes+'</span>';
-            html+='<span style="color: white; background-color: rgb(251, 3, 3); width: 65px; padding: 4px; position: absolute; left: 212px; text-align: center; border: 2px solid white; cursor: pointer; top: 65px; font-style: normal;" id="messagebox-btn-no" title="'+string.No+'">'+string.No+'</span>';
+            html+='<span style="position: absolute; color: white; background-color: green; width: 70px; padding: 4px; left: 130px; text-align: center; border: 2px solid white; cursor: pointer; top: 65px; font-style: normal;" id="messagebox-btn-yes" title="'+string.Yes+'">'+string.Yes+'</span>';
+            html+='<span style="color: white; background-color: rgb(251, 3, 3); width: 70px; padding: 4px; position: absolute; left: 212px; text-align: center; border: 2px solid white; cursor: pointer; top: 65px; font-style: normal;" id="messagebox-btn-no" title="'+string.No+'">'+string.No+'</span>';
         }
         html+='</div></div>';
         basediv=document.createElement('div');
